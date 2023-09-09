@@ -1,5 +1,6 @@
 ﻿using AuctionService.Data;
 using AuctionService.DTOs;
+using AuctionService.Entities;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -40,5 +41,20 @@ public class AuctionsController : ControllerBase
             return NotFound();
         }
         return Ok(_mapper.Map<AuctionDto>(auction));
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto auctionDto)
+    {
+        var auction = _mapper.Map<Auction>(auctionDto);
+        // TODO: add current user as seller
+        auction.Seller = "test";
+        _context.Auctions.Add(auction);
+        var result = await _context.SaveChangesAsync() > 0;
+        if (!result)
+        {
+            return BadRequest("Could not save changes.");
+        }
+        return CreatedAtAction(nameof(GetAuctionById), new { id = auction.Id }, _mapper.Map<AuctionDto>(auction));
     }
 }
