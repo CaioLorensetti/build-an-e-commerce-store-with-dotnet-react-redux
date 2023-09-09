@@ -1,17 +1,22 @@
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
     "version": "2.0.0",
-    "workspaceFolder": "src",
     "tasks": [
         {
             "label": "build",
             "command": "dotnet",
-            "type": "process",
+            "type": "shell",
             "args": [
                 "build",
-                "${workspaceFolder}/CommerceStore.sln",
+                "${workspaceFolder}/src/CommerceStore.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
             "problemMatcher": "$msCompile"
         },
         {
@@ -20,7 +25,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/CommerceStore.sln",
+                "${workspaceFolder}/src/CommerceStore.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -34,7 +39,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/CommerceStore.sln"
+                "${workspaceFolder}/src/CommerceStore.sln"
             ],
             "problemMatcher": "$msCompile"
         }
