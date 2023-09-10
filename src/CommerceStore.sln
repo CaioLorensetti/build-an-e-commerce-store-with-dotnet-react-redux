@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService", "AuctionService\AuctionService.csproj", "{6083B03A-4712-4456-8B40-2C92953587CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "SearchService\SearchService.csproj", "{0CF0A2A6-A0BC-4C6B-AFA1-E9C74200DF30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6083B03A-4712-4456-8B40-2C92953587CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6083B03A-4712-4456-8B40-2C92953587CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6083B03A-4712-4456-8B40-2C92953587CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CF0A2A6-A0BC-4C6B-AFA1-E9C74200DF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF0A2A6-A0BC-4C6B-AFA1-E9C74200DF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF0A2A6-A0BC-4C6B-AFA1-E9C74200DF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF0A2A6-A0BC-4C6B-AFA1-E9C74200DF30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

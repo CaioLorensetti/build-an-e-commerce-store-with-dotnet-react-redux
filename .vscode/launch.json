@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/AuctionService/bin/Debug/net7.0/API.dll",
+            "program": "${workspaceFolder}/src/AuctionService/bin/Debug/net7.0/AuctionService.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/AuctionService",
             "stopAtEntry": false,
@@ -19,9 +19,6 @@
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/src/Views"
             }
         },
         {
